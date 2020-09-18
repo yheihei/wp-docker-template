@@ -1,10 +1,12 @@
-version: '2'
+version: '3'
 
 services:
    db:
      image: mysql:5.7
      volumes:
        - "./.data/db:/var/lib/mysql"
+       # Docker Volumeでデータ永続化させる場合はコメント外す
+       #  - db_data:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: wordpress
@@ -13,9 +15,9 @@ services:
        MYSQL_PASSWORD: wordpress
 
    wordpress:
+     build: .
      depends_on:
        - db
-     image: wordpress:latest
      links:
        - db
      ports:
@@ -27,3 +29,6 @@ services:
      volumes:
        - ./wordpress/wp-content:/var/www/html/wp-content
        - ./php/php.ini:/usr/local/etc/php/php.ini
+# Docker Volumeでデータ永続化させる場合はコメント外す
+# volumes:
+#   db_data:
