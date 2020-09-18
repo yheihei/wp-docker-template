@@ -8,6 +8,7 @@ Dockerを使ったWordPress環境をビルドスクリプト一発で作れる�
 ```
 $ git clone https://github.com/yheihei/wp-docker-template.git
 $ cd wp-docker-template
+$ docker-compose build
 $ ./build.sh
 ```
 ## 2回目以降の起動方法
