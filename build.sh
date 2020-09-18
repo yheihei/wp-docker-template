@@ -6,4 +6,5 @@ if [ ! -e ./wordpress ]; then
   unzip latest-ja.zip
   rm latest-ja.zip
 fi
+docker-compose build
 docker-compose up
