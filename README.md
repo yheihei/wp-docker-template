@@ -40,8 +40,10 @@ root@wordpress:/var/www/html# sudo /bin/sh init_wp_test.sh
 root@wordpress:/var/www/html# cd wp-content/themes/<テーマ名>/
 root@wordpress:/var/www/html/wp-content/themes/<テーマ名># ./init_wp_theme_test.sh
 テーマのテストが可能な状態になりました
-
-root@wordpress:/var/www/html/wp-content/themes/new-theme# phpunit 
+```
+### テスト実行
+```
+root@wordpress:/var/www/html/wp-content/themes/<テーマ名># phpunit 
 Installing...
 Running as single site... To run multisite, use -c tests/phpunit/multisite.xml
 Not running ajax tests. To execute these, use --group ajax.
