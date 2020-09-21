@@ -7,4 +7,5 @@ if [ ! -e ./wordpress ]; then
   rm latest-ja.zip
 fi
 docker-compose build
-docker-compose up
+docker-compose up -d
+docker-compose exec wordpress bash
