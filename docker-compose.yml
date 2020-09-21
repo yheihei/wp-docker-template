@@ -4,16 +4,23 @@ services:
    db:
      image: mysql:5.7
      volumes:
-       - "./.data/db:/var/lib/mysql"
+       #  - "./.data/db:/var/lib/mysql"
        # Docker Volumeでデータ永続化させる場合はコメント外す
-       #  - db_data:/var/lib/mysql
+       - db_data:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: wordpress
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: wordpress
-
+   test_db:
+     image: mysql:5.7
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: wordpress_test
+       MYSQL_DATABASE: wordpress_test
+       MYSQL_USER: wordpress_test
+       MYSQL_PASSWORD: wordpress_test
    wordpress:
      build: .
      depends_on:
@@ -29,6 +36,9 @@ services:
      volumes:
        - ./wordpress/wp-content:/var/www/html/wp-content
        - ./php/php.ini:/usr/local/etc/php/php.ini
+       - ./init_wp.sh:/var/www/html/init_wp.sh
+       - ./init_wp_test.sh:/var/www/html/init_wp_test.sh
+       - ./init_wp_theme_test.sh:/var/www/html/init_wp_theme_test.sh
 # Docker Volumeでデータ永続化させる場合はコメント外す
-# volumes:
-#   db_data:
+volumes:
+  db_data:
