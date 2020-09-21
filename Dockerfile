@@ -1,8 +1,8 @@
 FROM wordpress:latest
 
-#wp-cliのインストール
+#wp-cli, phpunitのインストール
 RUN apt update \
-     && apt install -y sudo git unzip default-mysql-client subversion \
+     && apt install -y sudo git default-mysql-client subversion \
      && curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
      && chmod +x wp-cli.phar \
      && mv wp-cli.phar /usr/local/bin/wp \

@@ -23,7 +23,7 @@ wp scaffold _s new-theme --theme_name="新規テーマ" --author="制作者名" 
 wp theme activate new-theme --allow-root
 
 # テーマの削除
-wp theme delete twentyseventeen --allow-root
-wp theme delete twentyeighteen --allow-root
-wp theme delete twentynineteen --allow-root
-wp theme delete twentytwenty --allow-root
+# wp theme delete twentyseventeen --allow-root
+# wp theme delete twentyeighteen --allow-root
+# wp theme delete twentynineteen --allow-root
+# wp theme delete twentytwenty --allow-root

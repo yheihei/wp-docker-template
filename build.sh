@@ -8,3 +8,4 @@ if [ ! -e ./wordpress ]; then
 fi
 docker-compose build
 docker-compose up -d
+docker-compose exec wordpress bash

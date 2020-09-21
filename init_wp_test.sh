@@ -8,6 +8,7 @@ do
   if [ ! -e ./$THEME_NAME/tests ]; then
     echo "$THEME_NAME のテスト初期化"
     wp scaffold theme-tests --dir=/var/www/html/wp-content/themes/$THEME_NAME --allow-root
+    cp /var/www/html/init_wp_theme_test.sh /var/www/html/wp-content/themes/$THEME_NAME/init_wp_theme_test.sh
     chown -R www-data /var/www/html/wp-content/themes/$THEME_NAME
   fi
 done
