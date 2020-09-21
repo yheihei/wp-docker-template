@@ -1,6 +1,6 @@
-# 概要
-* Dockerを使ったWordPress+WP-CLI+PHPUnit環境をビルドスクリプト一発で作れる環境です
-* テーマテストの初期化スクリプトを使い、すぐにテスト駆動開発の準備が整う
+# WordPress+WP-CLI+PHPUnit環境をDockerで動かす
+* Dockerを使ったWordPress+WP-CLI+PHPUnit環境をビルドスクリプト一発で作ることができる環境です
+* テーマテストの初期化スクリプトを使い、すぐにテスト駆動開発の準備が整います
 # 構成
 * アプリケーションサーバー:WordPressコンテナ
 * DBサーバー:mysqlコンテナ
