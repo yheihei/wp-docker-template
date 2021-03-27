@@ -16,6 +16,13 @@ root@wordpress:/var/www/html# sudo /bin/sh init_wp.sh
 ```
 http://localhost:8000
 ```
+## 管理画面
+```
+URL: http://localhost:8000/wp-admin/
+```
+## 初期ログイン情報
+ユーザー： yhei  
+パスワード
 ## 2回目以降の起動方法
 ```
 $ docker-compose up
