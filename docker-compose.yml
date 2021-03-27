@@ -33,9 +33,10 @@ services:
      hostname: wordpress
      environment:
        WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
      volumes:
-       - ./wordpress/wp-content:/var/www/html/wp-content
+       - ./wordpress:/var/www/html
        - ./php/php.ini:/usr/local/etc/php/php.ini
        - ./init_wp.sh:/var/www/html/init_wp.sh
        - ./init_wp_test.sh:/var/www/html/init_wp_test.sh
