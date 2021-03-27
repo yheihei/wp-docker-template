@@ -18,10 +18,6 @@ wp plugin install wp-multibyte-patch --activate --allow-root
 #wp plugin install backwpup --active --allow-root
 #wp plugin install siteguard --active --allow-root
 
-# 新規テーマのひな型を追加してアクティブ化(new-themeは任意のテーマ識別子)
-wp scaffold _s new-theme --theme_name="新規テーマ" --author="制作者名" --allow-root
-wp theme activate new-theme --allow-root
-
 # テーマの削除
 # wp theme delete twentyseventeen --allow-root
 # wp theme delete twentyeighteen --allow-root
