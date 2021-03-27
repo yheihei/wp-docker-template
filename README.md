@@ -10,17 +10,17 @@
 $ git clone https://github.com/yheihei/wp-docker-template.git
 $ cd wp-docker-template
 $ ./build.sh
-root@wordpress:/var/www/html# sudo /bin/sh init_wp.sh
+$ docker-compose up
 ```
-## ブラウザアクセス
+## サイトへのアクセス
 ```
 http://localhost:8000
 ```
-## 管理画面
+## 管理画面へのアクセス
 ```
 http://localhost:8000/wp-admin/
 ```
-## 初期ログイン情報
+### 初期ログイン情報
 ユーザー： yhei  
 パスワード: password  
 ## 2回目以降の起動方法
